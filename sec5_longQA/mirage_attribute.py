@@ -9,6 +9,7 @@ import numpy as np
 import string
 import torch
 from searcher import SearcherWithinDocs
+import os
 
 from utils import *
 import inseq
@@ -22,13 +23,16 @@ def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--f", type=str, help="Output data file")
     
-    #args = parser.parse_args()
-    
+    args = parser.parse_args()
     data = json.load(open(args.f))
     if not data["args"]["standard"]:
         save_dir = "./internal_selfcitation/"
     else:
         save_dir = "./internal_standard/"
+    
+    if not os.path.exists(save_dir):
+        os.makedirs(save_dir)
+
     # Load prompt
     prompt_data = json.load(open(data["args"]["prompt_file"]))
 
@@ -62,6 +66,8 @@ def main():
     else:
         raise ValueError("model not supported yet")
 
+    cache_dir = os.getenv("TMPDIR")
+
     num_empty = 0
     for idx, item in enumerate(tqdm(data['data'])):
         if item["output"] == "": 
@@ -80,7 +86,7 @@ def main():
         contextless_input_current_text = input_template.replace("{context}", "")
         output_current_text = remove_citations(item["output"])
 
-        if idx == 0
+        if idx == 0:
             print("***********")
             print("input_context_text")
             print(input_context_text)
@@ -121,6 +127,7 @@ def main():
                     "torch_dtype": torch.float16,
                     "max_memory": get_max_memory(),
                     "load_in_8bit": False,
+                    "cache_dir": cache_dir,
                     },
                 generation_kwargs={
                     "do_sample": True,

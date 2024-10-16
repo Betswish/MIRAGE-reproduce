@@ -465,10 +465,13 @@ def main():
         if args.azure:
             eval_data["azure_filter_fail"] = llm.azure_filter_fail 
     
+    if not os.path.exists("result/")
+        os.makedirs("result/")
+
     if not args.standard:
-        save_path = "result/selfcitation"
+        save_path = "result/selfcitation/"
     else:
-        save_path = "result/standard"
+        save_path = "result/standard/"
 
     if not os.path.exists(save_path):
         os.makedirs(save_path)

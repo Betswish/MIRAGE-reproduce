@@ -1,0 +1,9 @@
+{
+    "length": 183.0,
+    "str_em": 0,
+    "str_hit": 0,
+    "rougeLsum": 15.947531923651933,
+    "citation_rec": 31.01851851851852,
+    "citation_prec": 21.03174603174603,
+    "citation_f1": 25.067061979387265
+}

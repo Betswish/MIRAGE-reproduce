@@ -1,4 +1,4 @@
-# Experiments in main paper with self-citation prompts
+# Experiments in main paper with self-citation prompts with CTI threshold of "mean + 1 standard deviation" and CCI threshold of Top 5%
 python mirage_cite.py --f result/selfcitation/eli5-zephyr-7b-beta-bm25-shot0-ndoc5-42.json --CTI 1 --CCI -5
 python mirage_cite.py --f result/selfcitation/eli5-zephyr-7b-beta-bm25-shot0-ndoc5-43.json --CTI 1 --CCI -5
 python mirage_cite.py --f result/selfcitation/eli5-zephyr-7b-beta-bm25-shot0-ndoc5-44.json --CTI 1 --CCI -5

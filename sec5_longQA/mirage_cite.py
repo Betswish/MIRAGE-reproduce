@@ -73,7 +73,10 @@ def main():
     
     args = parser.parse_args()
     data = json.load(open(args.f))
-    
+
+    topk_CTI = args.CTI
+    topk_CCI = args.CCI
+
     if not data["args"]["standard"]:
         load_dir = "./internal_selfcitation/"
     else:
@@ -184,7 +187,7 @@ def main():
     if cite_idx_acs:
         tag += '_acs'
 
-    json.dump(data, open(args.f + f".post_hoc_cite{tag}", 'w'), indent=4)
+    json.dump(data, open(args.f + f"{tag}", 'w'), indent=4)
 
 if __name__ == "__main__":
     main()

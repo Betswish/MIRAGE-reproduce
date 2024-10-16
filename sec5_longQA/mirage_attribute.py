@@ -121,7 +121,6 @@ def main():
                     "torch_dtype": torch.float16,
                     "max_memory": get_max_memory(),
                     "load_in_8bit": False,
-                    "cache_dir": "/projects/0/prjs0888/plms/"
                     },
                 generation_kwargs={
                     "do_sample": True,

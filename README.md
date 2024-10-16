@@ -1,3 +1,3 @@
 # MIRAGE-reproduce
 
-The README.ME is building.
+The README.ME files are building.

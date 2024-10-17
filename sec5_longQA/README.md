@@ -29,6 +29,7 @@ bash 2_mirage_attribute.sh
 to get the model internals analyzed by MIRAGE. These intermediate results will be saved in ``./internal_selfcitation/`` or ``./internal_standard/`` according to the adopted instructions.
 
 **Step 4**
+
 Run
 ```
 bash 3_mirage_cite.sh
@@ -39,6 +40,7 @@ to generate citations with the model internals obtained by MIRAGE. Two parameter
 - ``CCI``: The parameter for the threshold of CCI selection. It means Top k selection strategy if k > 0; otherwise Top (-k)% strategy if k < 0. Default ``-5``.
 
 **Step 5**
+
 Run
 ```
 bash 4_eval.sh

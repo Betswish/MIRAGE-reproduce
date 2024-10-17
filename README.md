@@ -9,7 +9,7 @@ Authors (_* Equal contribution_): [Jirui Qi*](https://betswish.github.io/) • [
 </div>
 
 >[!TIP]
-> This is the repository for reproducing the experimental results in our [MIRAGE paper](https://arxiv.org/abs/2406.13663), accepted by the [EMNLP 2024](https://2024.emnlp.org/) Main Conference.
+> This is the repository for reproducing all experimental results in our [MIRAGE paper](https://arxiv.org/abs/2406.13663), accepted by the [EMNLP 2024](https://2024.emnlp.org/) Main Conference.
 
 
 <img src="fig/mirage_illustration.png"/> 

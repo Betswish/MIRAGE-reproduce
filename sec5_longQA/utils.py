@@ -111,15 +111,14 @@ def load_model(model_name_or_path, dtype=torch.float16, int8=False, reserve_memo
     if int8:
         logger.warn("Use LLM.int8")
     start_time = time.time()
-    import os
-    cache_dir = os.getenv("TMPDIR")
+    # import os
+    # cache_dir = os.getenv("TMPDIR")
     model = AutoModelForCausalLM.from_pretrained(
         model_name_or_path,
         device_map='auto',
         torch_dtype=dtype,
         max_memory=get_max_memory(),
         load_in_8bit=int8,
-        cache_dir=cache_dir,
     )
     logger.info("Finish loading in %.2f sec." % (time.time() - start_time))
 

@@ -16,7 +16,6 @@ else:
     dir_path_output = './internals-full/'
 
 
-threshold = None
 model_path = 'gsarti/cora_mgen'
 
 
@@ -44,7 +43,7 @@ for fname in files:
                     show_intermediate_outputs=False,
                     attributed_fn="contrast_prob_diff",
                     output_current_text=item['prediction'],
-                    context_sensitivity_std_threshold=threshold,
+                    context_sensitivity_std_threshold=0,
                     save_path=save_path,
                     generation_kwargs={"num_beams": 4, "min_length": 1, "max_length": 20, "early_stopping": False}
                     )

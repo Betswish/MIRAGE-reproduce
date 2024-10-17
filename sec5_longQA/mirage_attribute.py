@@ -66,7 +66,7 @@ def main():
     else:
         raise ValueError("model not supported yet")
 
-    cache_dir = os.getenv("TMPDIR")
+    # cache_dir = os.getenv("TMPDIR")
 
     num_empty = 0
     for idx, item in enumerate(tqdm(data['data'])):
@@ -127,7 +127,6 @@ def main():
                     "torch_dtype": torch.float16,
                     "max_memory": get_max_memory(),
                     "load_in_8bit": False,
-                    "cache_dir": cache_dir,
                     },
                 generation_kwargs={
                     "do_sample": True,

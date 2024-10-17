@@ -18,7 +18,7 @@ python MIRAGE_match.py --CCI k
 ```
 to get MIRAGE<sub>ex</sub> answer attribution on XOR-AttriQA-Match. Also, the scores of MIRAGE and NLI methods will be in the outputs.
 
-- ``CCI``: CCI threshold. Using Top k strategy if k > 0; otherwise Top (-k)% if k < 0, default -5.
+- ``CCI``: CCI threshold. Using Top k strategy if k > 0; otherwise Top (-k)% if k < 0. Default ``-5``.
 
 - ``val``: Specify ``--val`` to use use calibrated threshold for CTI filtering. ``python MIRAGE_match.py --val --CCI k`` enables you to get the results with MIRAGE<sub>cal</sub>.
 

@@ -10,7 +10,9 @@ Authors (_* Equal contribution_): [Jirui Qi*](https://betswish.github.io/) • [
 
 >[!TIP]
 > This is the repository for reproducing all experimental results in our [MIRAGE paper](https://arxiv.org/abs/2406.13663), accepted by the [EMNLP 2024](https://2024.emnlp.org/) Main Conference.
->If you find the paper helpful and use the content, we kindly suggest you cite through:
+> Also, check our demo [here](https://huggingface.co/spaces/gsarti/mirage)!
+
+If you find the paper helpful and use the content, we kindly suggest you cite through:
 ```bibtex
 @inproceedings{Qi2024ModelIA,
   title={Model Internals-based Answer Attribution for Trustworthy Retrieval-Augmented Generation},
